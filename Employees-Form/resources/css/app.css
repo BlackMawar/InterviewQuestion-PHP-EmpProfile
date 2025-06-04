@@ -16,6 +16,15 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+.outer-div-data {
+    text-align: center;
+    padding: 10px 20px 20px 25px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    width: 110%;
+}
+
 .bg {
     position: absolute;
     top: 0;
@@ -32,7 +41,7 @@ body {
 .content {
     position: relative;
     z-index: 2;
-    color: black; /* or white if background is dark */
+    color: black;
 }
 
 .form-div {
@@ -49,6 +58,12 @@ input {
     font-family: monospace;
     font-size: 16px;
 }
+input:focus {
+    outline: none;
+    border-color: #a75c27;
+    box-shadow: 0 0 5px rgba(167, 92, 39, 0.7);
+}
+
 
 h1 {
     font-size: 40px;
@@ -68,7 +83,7 @@ h1 {
 
 label {
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-family: monospace;
     font-weight: bold;
@@ -81,15 +96,15 @@ button {
     font-family: monospace;
     font-size: 16px;
     display: flex;
-    justify-content: center; /* Centering button content */
+    justify-content: center;
     width: 50%;
     max-width: 400px;
     margin: 20px auto;
 }
 
-#gender {
+#gender_male, #gender_female {
     width: 10%;
-    height: 10%;
+    height: 20px;
     text-align: left;
 }
 
@@ -101,12 +116,59 @@ p {
 }
 
 button:hover {
-    background: gray;
+    background: #a75c27;
     color: white;
     cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 button:active {
-    background: rgb(57, 55, 55);
-    font-size: 18px;
+    background: #853f1e;
+    transform: scale(1);
 }
+
+/* This is for mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    .form-div {
+        width: 90%;
+        padding: 10px;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+.table-data{
+    border: gray 1px solid;
+}
+
+thead{
+    background-color: rgb(251, 218, 173);
+    border: gray 1px solid;
+    padding: 10px;
+    width: auto;
+}
+th, td{
+    border: gray 1px solid;
+    padding: 10px;
+    width: auto;
+}
+
+td{
+    font-family:monospace;
+    font-size: 12px;
+}
+
+.button-container {
+        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;             
+    }
