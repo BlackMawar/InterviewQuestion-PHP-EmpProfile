@@ -44,3 +44,4 @@ Simple php test to create and display employee profile
 - Clean code and good practise
 - Good UI UX
 
+![Screen Interface](https://github.com/BlackMawar/InterviewQuestion-PHP-EmpProfile/blob/main/Employees-Form/assets/form-filling.PNG)
